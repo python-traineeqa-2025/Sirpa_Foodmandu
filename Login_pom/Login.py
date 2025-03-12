@@ -1,16 +1,23 @@
-class login():
-    def loginpage(self):
+from Login_pom.Login_prop import Login_Prop
 
-        driver = webdriver.Chrome()
+class Login(Login_Prop):
 
-        driver.get("https://foodmandu.com/Account/Login")
-        driver.find_element(By.NAME,'Email').send_keys('example@practice.com')
-        driver.find_element(By.NAME,'Password').send_keys('12345678')
-        driver.find_element(By.CSS_SELECTOR, 'input[type=\"checkbox\"] + label').click()
-        driver.find_element(By.CSS_SELECTOR, '.btn-block').click()
+    def __init__(self, driver):
+        self.driver = driver
+
+    def Login_Page(self, Email, Password):
+        email = self.email_input
+        email.send_keys(Email)
+
+        pwd = self.password_input
+        pwd.send_keys(Password)
+
+        checkbox=self.checkbox_tick
+        checkbox.click()
+
+        loginbtn = self.login_button
+        loginbtn.click()
 
 
-        time.sleep(5)
 
-findbyname= login()
-findbyname.loginpage()
+

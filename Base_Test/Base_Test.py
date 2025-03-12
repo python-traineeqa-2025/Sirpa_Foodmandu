@@ -18,7 +18,6 @@ class BaseTest:
         self.driver.maximize_window()
         self.driver.implicitly_wait(10)
 
-        # creds_path = r"C:\Users\sirpah\OneDrive - Infinite Computer Solutions (India) Limited\Desktop\QA\QA Automation\SirpaAutomation\cred\creds.json"
-        # with open(creds_path, "r") as f:
-        #     # x=json.load(f)
-        #     self.creds = json.load(f)
+        values_path = r"C:\Users\sirpah\OneDrive - Infinite Computer Solutions (India) Limited\Desktop\QA\QA Automation\Sirpa_Foodmandu\Values\login_values.json"
+        with open(values_path, "r") as f:
+            self.values = json.load(f)

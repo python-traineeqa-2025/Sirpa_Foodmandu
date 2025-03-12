@@ -16,6 +16,6 @@ class Login_Prop(Login_Locators):
         return self.driver.find_element(*Login_Locators.Checkbox)
 
     @property
-    def Login_click(self):
+    def login_button(self):
         return self.driver.find_element(*Login_Locators.Login_btn)
 
