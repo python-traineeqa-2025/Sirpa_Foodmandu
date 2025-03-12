@@ -1,3 +1,4 @@
+
 from Login_pom.Login_prop import Login_Prop
 
 class Login(Login_Prop):
@@ -6,6 +7,10 @@ class Login(Login_Prop):
         self.driver = driver
 
     def Login_Page(self, Email, Password):
+
+        login= self.go_login
+        login.click()
+
         email = self.email_input
         email.send_keys(Email)
 
