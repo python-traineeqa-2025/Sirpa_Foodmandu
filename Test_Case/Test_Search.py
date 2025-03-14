@@ -11,9 +11,8 @@ class TestSearch(BaseTest):
         searchobj = Search(self.driver)
 
         restaurant = self.values["restaurant"]
-        #location= self.values["location"]
 
         searchobj.Search_item(restaurant)
 
 
-        time.sleep(10)
+        time.sleep(3)
