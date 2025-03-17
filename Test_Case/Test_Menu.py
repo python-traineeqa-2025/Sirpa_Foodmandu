@@ -13,7 +13,7 @@ class TestMenu(BaseTest):
         menuobj=Menu(self.driver)
         menuobj.menu()
 
-        time.sleep(3)
+
 
 
 
