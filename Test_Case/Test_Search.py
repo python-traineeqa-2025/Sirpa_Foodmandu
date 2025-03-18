@@ -15,4 +15,4 @@ class TestSearch(BaseTest):
 
         searchobj.Search_item(restaurant)
 
-        time.sleep(3)
+        time.sleep(8)

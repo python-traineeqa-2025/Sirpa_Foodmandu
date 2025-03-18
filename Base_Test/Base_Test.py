@@ -13,11 +13,11 @@ class BaseTest:
         ser = Service(driver_path)
         logging.info("set up driver")
 
-        # # Set up Chrome options to disable geolocation
-        # chrome_options = Options()
-        # chrome_options.add_experimental_option("prefs", {
-        #     "profile.default_content_settings.geolocation": 2
-        # })
+        # Set up Chrome options to enable geolocation
+        chrome_options = Options()
+        chrome_options.add_experimental_option("prefs", {
+            "profile.default_content_settings.geolocation": 2
+        })
 
         # Initialize the WebDriver with the options
         self.driver = webdriver.Chrome(service=ser) #,options=chrome_options)

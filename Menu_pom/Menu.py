@@ -12,6 +12,7 @@ class Menu(Menu_prop):
 
         pizza_type=self.select_pizza
         self.driver.execute_script("arguments[0].click();", pizza_type)
+        #pizza_type.click()
 
 
 
