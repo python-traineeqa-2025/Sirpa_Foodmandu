@@ -16,11 +16,11 @@ class BaseTest:
         # Set up Chrome options to enable geolocation
         chrome_options = Options()
         chrome_options.add_experimental_option("prefs", {
-            "profile.default_content_settings.geolocation": 2
+            "profile.default_content_settings.geolocation": 1
         })
 
         # Initialize the WebDriver with the options
-        self.driver = webdriver.Chrome(service=ser) #,options=chrome_options)
+        self.driver = webdriver.Chrome(service=ser,options=chrome_options)
         self.driver.maximize_window()
         self.driver.implicitly_wait(10)
 

@@ -1,4 +1,6 @@
 import time
+from selenium.webdriver.common.by import By
+
 from Base_Test.Base_Test import BaseTest
 from Login_pom.Login import Login
 from Menu_pom.Menu import Menu
@@ -22,8 +24,18 @@ class TestMenu(BaseTest):
         # search
         searchobj = Search(self.driver)
         restaurant = self.values["restaurant"]
-        searchobj.Search_item(restaurant)
-        time.sleep(20)
+        searchobj.search_item(restaurant)
+
+        location=self.driver.find_element(By.XPATH,"//span[text()=\'Change\']")
+        location.click()
+
+        confirm=self.driver.find_element(By.XPATH,"//a[text()=\'Confirm this Location\']")
+        confirm.click()
+
+        done=self.driver.find_element(By.XPATH,"//label[text()=\'Done\']")
+        done.click()
+
+        time.sleep(2)
 
         #select restaurant
         restobj = Restaurant(self.driver)
@@ -33,9 +45,23 @@ class TestMenu(BaseTest):
         menuobj = Menu(self.driver)
         menuobj.menu()
 
-        time.sleep(5)
+'''
 
 
+//span[text()='Change']
+
+//a[text()='Confirm this Location']
+
+//label[text()='Done']
+
+menu:
+parent=//ul[contains(@class, 'menu__items')][contains(., 'Pizza')]
+//ul[contains(@class, 'menu__items')][text()='Pizza']
+
+ 
+
+ 
+'''
 
 
 

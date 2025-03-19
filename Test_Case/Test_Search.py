@@ -1,4 +1,7 @@
 import time
+
+from selenium.webdriver.common.by import By
+
 from Base_Test.Base_Test import BaseTest
 from Search_pom.Search import Search
 
@@ -14,5 +17,14 @@ class TestSearch(BaseTest):
         #location = self.values["location"]
 
         searchobj.Search_item(restaurant)
+
+        location = self.driver.find_element(By.XPATH, "//span[text()=\'Change\']")
+        location.click()
+
+        confirm = self.driver.find_element(By.XPATH, "//a[text()=\'Confirm this Location\']")
+        confirm.click()
+
+        done = self.driver.find_element(By.XPATH, "//label[text()=\'Done\']")
+        done.click()
 
         time.sleep(8)
