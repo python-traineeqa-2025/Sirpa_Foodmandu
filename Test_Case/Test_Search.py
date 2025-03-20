@@ -24,4 +24,4 @@ class TestSearch(BaseTest):
         locationobj.location()
         time.sleep(2)
 
-        time.sleep(8)
+        time.sleep(3)

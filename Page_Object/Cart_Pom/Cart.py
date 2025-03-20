@@ -14,6 +14,7 @@ class Cart(Cart_prop):
         inst.click()
         inst.send_keys(instruction)
 
+        time.sleep(1)
         plus=self.select_add
         plus.click()
         time.sleep(2)

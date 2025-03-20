@@ -48,4 +48,7 @@ class TestCheckout(BaseTest):
 
         # checkout
         checkoutobj= Checkout(self.driver)
-        checkoutobj.checkout_page()
+        hattisar_location=self.values["locH"]
+        location_title=self.values["title"]
+        ph_num=self.values["phonenum"]
+        checkoutobj.checkout_page(hattisar_location,location_title,ph_num)

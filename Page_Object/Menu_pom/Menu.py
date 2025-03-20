@@ -14,6 +14,8 @@ class Menu(Menu_prop):
 
     def menu(self):
 
+        self.driver.execute_script('scrollBy(0,300)')
+        time.sleep(2)
         #to select pizza from categories
         food=self.select_food
         self.driver.execute_script("arguments[0].scrollIntoView();",food)

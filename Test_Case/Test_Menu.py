@@ -1,5 +1,4 @@
 import time
-from selenium.webdriver.common.by import By
 
 from Base_Test.Base_Test import BaseTest
 from Page_Object.Login_pom.Login import Login

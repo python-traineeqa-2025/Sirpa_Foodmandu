@@ -12,7 +12,6 @@ class TestRestaurant(BaseTest):
         searchobj = Search(self.driver)
 
         restaurant = self.values["restaurant"]
-        # location = self.values["location"]
         searchobj.search_item(restaurant)
         self.driver.get(url)
 
