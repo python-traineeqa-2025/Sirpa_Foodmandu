@@ -26,9 +26,11 @@ class Checkout(Checkout_Prop):
         auto_item=self.auto_suggest
         auto_item.click()
 
+        time.sleep(3)
         confirm_address=self.confirm_location
         confirm_address.click()
 
+        time.sleep(1)
         title=self.address_title
         title.click()
         title.send_keys("Infinite Solutions Pvt.Ltd")
@@ -47,6 +49,8 @@ class Checkout(Checkout_Prop):
         save_button=self.click_save
         save_button.click()
 
+        time.sleep(5)
+
                         #Delivery Date and Time
         schedule=self.schedule_delivery
         schedule.click()
@@ -56,7 +60,7 @@ class Checkout(Checkout_Prop):
         date_dd=Select(date_option)
         date_dd.select_by_index(2)
 
-        time.sleep(2)
+        # time.sleep(2)
 
         time_option=self.select_time
         WebDriverWait(self.driver, 10).until(
