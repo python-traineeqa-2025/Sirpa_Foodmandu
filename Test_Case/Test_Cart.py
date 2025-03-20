@@ -1,9 +1,11 @@
 from selenium.webdriver.common.by import By
+import time
 
 from Base_Test.Base_Test import BaseTest
 from Page_Object.Login_pom.Login import Login
 from Page_Object.Search_pom.Search import Search
 from Page_Object.Restaurant_pom.Restaurant import Restaurant
+from Page_Object.Location_Pom.Location import Location
 from Page_Object.Menu_pom.Menu import Menu
 from Page_Object.Cart_Pom.Cart import Cart
 
@@ -25,14 +27,10 @@ class TestCart(BaseTest):
         restaurant = self.values["restaurant"]
         searchobj.search_item(restaurant)
 
-        location = self.driver.find_element(By.XPATH, "//span[text()=\'Change\']")
-        location.click()
-
-        confirm = self.driver.find_element(By.XPATH, "//a[text()=\'Confirm this Location\']")
-        confirm.click()
-
-        done = self.driver.find_element(By.XPATH, "//label[text()=\'Done\']")
-        done.click()
+        # location
+        locationobj = Location(self.driver)
+        locationobj.location()
+        time.sleep(2)
 
         # select restaurant
         restobj = Restaurant(self.driver)

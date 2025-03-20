@@ -4,7 +4,7 @@ class Location_prop(Location_Locator):
 
     @property
     def select_change(self):
-        return self.driver.find_element(*Location_Locator.location)
+        return self.driver.find_element(*Location_Locator.change)
 
     @property
     def select_confirm(self):

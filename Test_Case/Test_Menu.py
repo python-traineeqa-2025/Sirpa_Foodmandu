@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 
 from Base_Test.Base_Test import BaseTest
 from Page_Object.Login_pom.Login import Login
+from Page_Object.Location_Pom.Location import Location
 from Page_Object.Menu_pom.Menu import Menu
 from Page_Object.Restaurant_pom.Restaurant import Restaurant
 from Page_Object.Search_pom.Search import Search
@@ -26,16 +27,9 @@ class TestMenu(BaseTest):
         restaurant = self.values["restaurant"]
         searchobj.search_item(restaurant)
 
-        location=self.driver.find_element(By.XPATH,"//span[text()=\'Change\']")
-        location.click()
-        time.sleep(3)
-
-        confirm=self.driver.find_element(By.XPATH,"//a[text()=\'Confirm this Location\']")
-        confirm.click()
-
-        done=self.driver.find_element(By.XPATH,"//label[text()=\'Done\']")
-        done.click()
-
+        #location
+        locationobj=Location(self.driver)
+        locationobj.location()
         time.sleep(2)
 
         #select restaurant
@@ -59,7 +53,15 @@ menu:
 parent=//ul[contains(@class, 'menu__items')][contains(., 'Pizza')]
 //ul[contains(@class, 'menu__items')][text()='Pizza']
 
- 
+ # location=self.driver.find_element(By.XPATH,"//span[text()=\'Change\']")
+        # location.click()
+        # time.sleep(3)
+        #
+        # confirm=self.driver.find_element(By.XPATH,"//a[text()=\'Confirm this Location\']")
+        # confirm.click()
+        #
+        # done=self.driver.find_element(By.XPATH,"//label[text()=\'Done\']")
+        # done.click()
 
  
 '''

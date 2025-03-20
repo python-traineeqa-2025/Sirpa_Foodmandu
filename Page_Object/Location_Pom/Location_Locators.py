@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 class Location_Locator(object):
-    location = (By.XPATH, "//span[text()=\'Change\']")
+    change = (By.XPATH, "//span[text()=\'Change\']")
     confirm = (By.XPATH, "//a[text()=\'Confirm this Location\']")
     done = (By.XPATH, "//label[text()=\'Done\']")
 
