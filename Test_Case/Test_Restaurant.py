@@ -1,6 +1,6 @@
 
 from Base_Test.Base_Test import BaseTest
-from Restaurant_pom.Restaurant import Restaurant
+from Page_Object.Restaurant_pom import Restaurant
 
 class TestRestaurant(BaseTest):
 

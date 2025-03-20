@@ -6,7 +6,7 @@ class Checkout_Locators(object):
 
                 #address details popup
     enterloc_btn=(By.XPATH,"//input[@id='googleLocation']")
-    # //div[@class='pac-container pac-logo hdpi']//div[2]
+    auto_suggest_item=(By.XPATH,"//div[@class='pac-container pac-logo hdpi']//div[2]")
     confirmLoc_btn=(By.XPATH,"//a[normalize-space()='Confirm this Location']")
     address_title=(By.XPATH,"//input[@placeholder='Enter Title e.g. Home, Office']")
     direction=(By.XPATH,"//textarea[@placeholder='Enter Detail Address Direction']")
@@ -17,7 +17,7 @@ class Checkout_Locators(object):
                 #deliver date and time
     schedule_delivery_btn=(By.XPATH,"//input[@id='delivery_2']")
     date_btn=(By.XPATH,"//select[@class='form-control select select--full-width ng-pristine ng-untouched ng-valid ng-not-empty']")
-    time_btn=(By.XPATH,"//select[@class='form-control select select--full-width ng-pristine ng-untouched ng-valid ng-empty']")
+    time_btn=(By.CSS_SELECTOR,".select-dropdown .select")
 
                 #payment option
     pay_option=(By.XPATH,"//input[@id='2']")

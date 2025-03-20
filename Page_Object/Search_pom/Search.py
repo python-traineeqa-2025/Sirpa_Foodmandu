@@ -1,8 +1,6 @@
-import logging
-
 from selenium.common import StaleElementReferenceException
 
-from Search_pom.Search_Prop import Search_Prop
+from Page_Object.Search_pom.Search_Prop import Search_Prop
 
 class Search(Search_Prop):
 

@@ -1,8 +1,12 @@
-from Checkout_Pom.Checkout_Locators import Checkout_Locators
+from Page_Object.Checkout_Pom.Checkout_Locators import Checkout_Locators
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 class Checkout_Prop(Checkout_Locators):
+
+    # def __init__(self, driver):
+    #     self.driver = driver
+    #     self.wait = WebDriverWait(self.driver, 10)
 
     @property
     def go_checkout(self):
@@ -17,8 +21,15 @@ class Checkout_Prop(Checkout_Locators):
         )
 
     @property
+    def auto_suggest(self):
+
+        return WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable(Checkout_Locators.auto_suggest_item)
+        )
+
+    @property
     def confirm_location(self):
-        return  WebDriverWait(self.driver,10).until(
+        return WebDriverWait(self.driver, 10).until(
             EC.element_to_be_clickable(Checkout_Locators.confirmLoc_btn)
         )
 

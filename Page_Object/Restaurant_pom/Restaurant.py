@@ -1,5 +1,6 @@
-from Restaurant_pom.Restaurant_prop import Restaurant_prop
-import time
+from Page_Object.Restaurant_pom.Restaurant_prop import Restaurant_prop
+
+
 class Restaurant(Restaurant_prop):
     def __init__(self, driver):
         self.driver = driver

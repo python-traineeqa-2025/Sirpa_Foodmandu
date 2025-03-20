@@ -5,7 +5,7 @@ import time
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from Menu_pom.Menu_prop import Menu_prop
+from Page_Object.Menu_pom.Menu_prop import Menu_prop
 
 class Menu(Menu_prop):
 
@@ -20,7 +20,7 @@ class Menu(Menu_prop):
         try:
             # parent = self.driver.find_element(By.XPATH, "//ul[contains(@class, 'menu__items')]")
             # element = parent.find_element(By.XPATH, "//li//div[@class='menu__price']")
-            element=self.driver.find_element(By.XPATH, "(//div[@id='Product'])[68]")
+            element=self.driver.find_element(By.XPATH, "(//li[@class='d-flex justify-content-between ng-scope'])[72]")
             self.driver.execute_script("arguments[0].click();", element)
 
         except ElementClickInterceptedException:

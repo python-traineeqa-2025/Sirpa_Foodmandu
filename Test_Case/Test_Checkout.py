@@ -1,14 +1,12 @@
-import time
-
 from selenium.webdriver.common.by import By
 
 from Base_Test.Base_Test import BaseTest
-from Login_pom.Login import Login
-from Search_pom.Search import Search
-from Restaurant_pom.Restaurant import Restaurant
-from Menu_pom.Menu import Menu
-from Cart_Pom.Cart import Cart
-from Checkout_Pom.Checkout import Checkout
+from Page_Object.Login_pom import Login
+from Page_Object.Search_pom import Search
+from Page_Object.Restaurant_pom import Restaurant
+from Page_Object.Menu_pom import Menu
+from Page_Object.Cart_Pom.Cart import Cart
+from Page_Object.Checkout_Pom import Checkout
 
 class TestCheckout(BaseTest):
 

@@ -1,5 +1,5 @@
 
-from Login_pom.Login_prop import Login_Prop
+from Page_Object.Login_pom.Login_prop import Login_Prop
 
 class Login(Login_Prop):
 

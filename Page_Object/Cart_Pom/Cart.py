@@ -1,5 +1,5 @@
 import time
-from Cart_Pom.Cart_prop import Cart_prop
+from Page_Object.Cart_Pom.Cart_prop import Cart_prop
 
 class Cart(Cart_prop):
 

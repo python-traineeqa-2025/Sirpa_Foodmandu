@@ -1,4 +1,4 @@
-from Menu_pom.Menu_Locator import Menu_locator
+from Page_Object.Menu_pom.Menu_Locator import Menu_locator
 
 class Menu_prop(Menu_locator):
 

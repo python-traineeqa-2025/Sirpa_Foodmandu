@@ -1,4 +1,4 @@
-from Search_pom.Search_Locators import Search_Locators
+from Page_Object.Search_pom.Search_Locators import Search_Locators
 
 class Search_Prop(Search_Locators):
     @property

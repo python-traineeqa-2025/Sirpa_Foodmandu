@@ -1,4 +1,4 @@
-from Restaurant_pom.Restaurant_Locators import Restaurant_Locators
+from Page_Object.Restaurant_pom.Restaurant_Locators import Restaurant_Locators
 
 class Restaurant_prop(Restaurant_Locators):
 

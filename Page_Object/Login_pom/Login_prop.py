@@ -1,4 +1,4 @@
-from Login_pom.Login_Locators import Login_Locators
+from Page_Object.Login_pom.Login_Locators import Login_Locators
 
 
 class Login_Prop(Login_Locators):

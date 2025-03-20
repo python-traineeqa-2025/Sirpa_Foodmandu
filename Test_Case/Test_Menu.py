@@ -2,10 +2,10 @@ import time
 from selenium.webdriver.common.by import By
 
 from Base_Test.Base_Test import BaseTest
-from Login_pom.Login import Login
-from Menu_pom.Menu import Menu
-from Restaurant_pom.Restaurant import Restaurant
-from Search_pom.Search import Search
+from Page_Object.Login_pom import Login
+from Page_Object.Menu_pom import Menu
+from Page_Object.Restaurant_pom import Restaurant
+from Page_Object.Search_pom import Search
 
 
 class TestMenu(BaseTest):
@@ -28,6 +28,7 @@ class TestMenu(BaseTest):
 
         location=self.driver.find_element(By.XPATH,"//span[text()=\'Change\']")
         location.click()
+        time.sleep(3)
 
         confirm=self.driver.find_element(By.XPATH,"//a[text()=\'Confirm this Location\']")
         confirm.click()

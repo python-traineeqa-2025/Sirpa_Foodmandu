@@ -1,4 +1,4 @@
-from Cart_Pom.Cart_Locators import Cart_Locators
+from Page_Object.Cart_Pom.Cart_Locators import Cart_Locators
 
 class Cart_prop(Cart_Locators):
 
