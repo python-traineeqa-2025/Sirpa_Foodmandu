@@ -13,14 +13,19 @@ class Menu(Menu_prop):
         self.driver = driver
 
     def menu(self):
+
+        #to select pizza from categories
         food=self.select_food
         self.driver.execute_script("arguments[0].scrollIntoView();",food)
         food.click()
+        time.sleep(5)
 
+        #To select Margarita pizza
         try:
             # parent = self.driver.find_element(By.XPATH, "//ul[contains(@class, 'menu__items')]")
             # element = parent.find_element(By.XPATH, "//li//div[@class='menu__price']")
-            element=self.driver.find_element(By.XPATH, "(//li[@class='d-flex justify-content-between ng-scope'])[72]")
+            #element=self.driver.find_element(By.XPATH, "(//li[@class='d-flex justify-content-between ng-scope'])[72]")
+            element=self.margaritta_pizza
             self.driver.execute_script("arguments[0].click();", element)
 
         except ElementClickInterceptedException:
@@ -36,7 +41,7 @@ class Menu(Menu_prop):
             self.driver.execute_script("arguments[0].click();", element)
 
 
-        time.sleep(5)
+        #time.sleep(5)
 
         # pizza_type=self.select_pizza
         # self.driver.execute_script("arguments[0].scrollIntoView(true);", pizza_type)

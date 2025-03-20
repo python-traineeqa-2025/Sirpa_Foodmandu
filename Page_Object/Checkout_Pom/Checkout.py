@@ -12,6 +12,7 @@ class Checkout(Checkout_Prop):
 
     def __init__(self, driver):
         self.driver = driver
+        self.wait = WebDriverWait(self.driver, 10)
 
     def checkout_page(self):
 

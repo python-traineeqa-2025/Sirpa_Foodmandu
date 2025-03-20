@@ -4,10 +4,6 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class Checkout_Prop(Checkout_Locators):
 
-    # def __init__(self, driver):
-    #     self.driver = driver
-    #     self.wait = WebDriverWait(self.driver, 10)
-
     @property
     def go_checkout(self):
         return self.driver.find_element(*Checkout_Locators.checkout_btn)
@@ -15,21 +11,19 @@ class Checkout_Prop(Checkout_Locators):
     @property
     def input_address(self):
         #return self.driver.find_element(*Checkout_Locators.enterloc_btn)
-
-        return WebDriverWait(self.driver, 10).until(
+        return self.wait.until(
             EC.element_to_be_clickable(Checkout_Locators.enterloc_btn)
         )
 
     @property
     def auto_suggest(self):
-
-        return WebDriverWait(self.driver, 10).until(
+        return self.wait.until(
             EC.element_to_be_clickable(Checkout_Locators.auto_suggest_item)
         )
 
     @property
     def confirm_location(self):
-        return WebDriverWait(self.driver, 10).until(
+        return self.wait.until(
             EC.element_to_be_clickable(Checkout_Locators.confirmLoc_btn)
         )
 
