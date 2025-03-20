@@ -6,6 +6,7 @@ class Checkout_Locators(object):
 
                 #address details popup
     enterloc_btn=(By.XPATH,"//input[@id='googleLocation']")
+    # //div[@class='pac-container pac-logo hdpi']//div[2]
     confirmLoc_btn=(By.XPATH,"//a[normalize-space()='Confirm this Location']")
     address_title=(By.XPATH,"//input[@placeholder='Enter Title e.g. Home, Office']")
     direction=(By.XPATH,"//textarea[@placeholder='Enter Detail Address Direction']")
