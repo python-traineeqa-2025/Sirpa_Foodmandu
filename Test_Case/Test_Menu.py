@@ -2,10 +2,10 @@ import time
 from selenium.webdriver.common.by import By
 
 from Base_Test.Base_Test import BaseTest
-from Page_Object.Login_pom import Login
-from Page_Object.Menu_pom import Menu
-from Page_Object.Restaurant_pom import Restaurant
-from Page_Object.Search_pom import Search
+from Page_Object.Login_pom.Login import Login
+from Page_Object.Menu_pom.Menu import Menu
+from Page_Object.Restaurant_pom.Restaurant import Restaurant
+from Page_Object.Search_pom.Search import Search
 
 
 class TestMenu(BaseTest):
