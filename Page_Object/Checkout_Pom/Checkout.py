@@ -129,9 +129,6 @@ class Checkout(Checkout_Prop):
         error=self.display_error
         logging.info(error.text)
 
-        # invalid_message_email = self.driver.find_element(By.XPATH, "//span[@class='invalid-message']")
-        # logging.info(invalid_message_email.text)
-
         time.sleep(3)
 
 
