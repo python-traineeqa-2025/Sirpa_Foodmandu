@@ -23,3 +23,8 @@ class Login_Prop(Login_Locators):
     def login_button(self):
         return self.driver.find_element(*Login_Locators.Login_btn)
 
+    @property
+    def wrong_login(self):
+        return self.driver.find_element(*Login_Locators.error_login)
+
+

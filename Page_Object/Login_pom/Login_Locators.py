@@ -7,3 +7,4 @@ class Login_Locators(object):
     Password =(By.NAME,"Password")
     Checkbox=(By.CSS_SELECTOR, 'label[for=\'agreement\']')
     Login_btn=(By.CSS_SELECTOR, 'button[type=\'submit\']')
+    error_login=(By.XPATH,"//p[@class='page-notifications page-notifications--error']")
