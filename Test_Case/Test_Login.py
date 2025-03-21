@@ -16,5 +16,3 @@ class TestLogin(BaseTest):
         Password= self.values["password"]
 
         lg.Login_Page(Email, Password)
-
-        time.sleep(2)
