@@ -1,5 +1,6 @@
 from selenium.common import NoSuchElementException
 import time
+import logging
 
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -54,15 +55,20 @@ class Checkout(Checkout_Prop):
         time.sleep(3)
 
                         #Delivery Date and Time
+        self.driver.execute_script('scrollBy(0, 300)')
         schedule=self.schedule_delivery
+        WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable(schedule)
+        )
         schedule.click()
 
+        time.sleep(2)
         date_option=self.select_date
         date_option.click()
         date_dd=Select(date_option)
         date_dd.select_by_index(2)
 
-        # time.sleep(2)
+        time.sleep(2)
 
         time_option=self.select_time
         WebDriverWait(self.driver, 10).until(
@@ -79,7 +85,7 @@ class Checkout(Checkout_Prop):
 
         time.sleep(2)
 
-        self.driver.execute_script('scrollBy(0, 500)')
+        self.driver.execute_script('scrollBy(0, 310)')
         time.sleep(2)
                     #pay option
         pay=self.payment_option
@@ -90,6 +96,44 @@ class Checkout(Checkout_Prop):
         continue_btn.click()
 
         time.sleep(3)
+
+
+    def Neg_checkout_page(self,Neg_loc):
+
+        bag_button = self.go_neg_checkout
+        bag_button.click()
+
+        bag_item_list=self.click_bag_item
+        bag_item_list.click()
+
+        proceed=self.go_neg_proceed
+        proceed.click()
+
+        cross=self.click_cross
+        cross.click()
+
+        delete=self.confirm_delete
+        delete.click()
+
+                            #address details pop up
+
+        neg_address=self.input_address
+        neg_address.click()
+        neg_address.send_keys(Neg_loc)
+
+        time.sleep(3)
+
+        confirm_address=self.confirm_location
+        confirm_address.click()
+
+        error=self.display_error
+        logging.info(error.text)
+
+        # invalid_message_email = self.driver.find_element(By.XPATH, "//span[@class='invalid-message']")
+        # logging.info(invalid_message_email.text)
+
+        time.sleep(3)
+
 
 
 

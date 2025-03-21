@@ -10,7 +10,6 @@ class Checkout_Prop(Checkout_Locators):
 
     @property
     def input_address(self):
-        #return self.driver.find_element(*Checkout_Locators.enterloc_btn)
         return self.wait.until(
             EC.element_to_be_clickable(Checkout_Locators.enterloc_btn)
         )
@@ -68,6 +67,30 @@ class Checkout_Prop(Checkout_Locators):
         return self.driver.find_element(*Checkout_Locators.continue_btn)
 
 
+                                #for negative testcase
+    @property
+    def go_neg_checkout(self):
+        return self.driver.find_element(*Checkout_Locators.bag_icon)
+
+    @property
+    def click_bag_item(self):
+        return self.driver.find_element(*Checkout_Locators.bag_item)
+
+    @property
+    def go_neg_proceed(self):
+        return self.driver.find_element(*Checkout_Locators.proceed_btn)
+
+    @property
+    def click_cross(self):
+        return self.driver.find_element(*Checkout_Locators.cross_btn)
+
+    @property
+    def confirm_delete(self):
+        return self.driver.find_element(*Checkout_Locators.delete)
+
+    @property
+    def display_error(self):
+        return self.driver.find_element(*Checkout_Locators.error)
 
 
 

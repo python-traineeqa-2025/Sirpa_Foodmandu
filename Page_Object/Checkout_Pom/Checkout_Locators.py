@@ -15,7 +15,7 @@ class Checkout_Locators(object):
     save=(By.XPATH,"//button[normalize-space()='Save']")
 
                 #deliver date and time
-    schedule_delivery_btn=(By.XPATH,"//input[@id='delivery_2']")
+    schedule_delivery_btn=(By.ID,"delivery_2")
     date_btn=(By.XPATH,"//select[@class='form-control select select--full-width ng-pristine ng-untouched ng-valid ng-not-empty']")
     time_btn=(By.CSS_SELECTOR,".select-dropdown .select")
 
@@ -23,5 +23,20 @@ class Checkout_Locators(object):
     pay_option=(By.XPATH,"//input[@id='2']")
 
     continue_btn=(By.XPATH,"//button[normalize-space()='Continue']")
+
+
+                #for negative address
+    bag_icon=(By.XPATH,"//span[@class='icomoon icon-shopping-bag']")
+    bag_item=(By.XPATH,"//div[@class='cart__restaurant-name ng-scope']")
+    proceed_btn=(By.XPATH,"//button[normalize-space()='Proceed to Checkout']")
+
+    cross_btn=(By.XPATH,"//span[@class='icomoon icon-close']")
+    delete=(By.XPATH,"//button[normalize-space()='Delete Address']")
+
+    error = (By.XPATH, "//p[@class='alert alert-danger ng-binding']")
+
+
+
+
 
 
