@@ -1,7 +1,5 @@
 import time
-import logging
 from Base_Test.Base_Test import BaseTest
-# from Page_Object.Login_pom.Login_prop import Login_Prop
 from Page_Object.Login_pom.Login import Login
 
 class TestLogin(BaseTest):
